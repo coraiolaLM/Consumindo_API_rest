@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Filmes - Sua Plataforma de Controle</title>
+    <link rel="stylesheet" href="css/homeCliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-container">
+                <h1 class="logo"><i class="fas fa-film"></i> Client Filmes</h1>
+                <button class="mobile-menu-button" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#para-assistir"><i class="fas fa-clock"></i> Para Assistir</a></li>
+                    <li><a href="#assistidos"><i class="fas fa-check-circle"></i> Assistidos</a></li>
+                    <li><a href="#cadastrar"><i class="fas fa-plus-circle"></i> Cadastrar Filme</a></li>
+                    <li><a href="#todos-filmes"><i class="fas fa-list"></i> Todos Filmes</a></li>
+                    <li><a href="#" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h2>Bem-vindo ao Client Filmes!</h2>
+            <p id="general-message" class="message"></p>
+        </div>
+
+        <div class="section" id="para-assistir">
+            <h3 class="collapsible-header">
+                <i class="fas fa-clock icon-section"></i> Filmes para assistir
+                <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </h3>
+            <div class="collapsible-content">
+                <div id="lista-para-assistir" class="film-list">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="assistidos">
+            <h3 class="collapsible-header">
+                <i class="fas fa-check-circle icon-section"></i> Filmes assistidos
+                <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </h3>
+            <div class="collapsible-content">
+                <div id="lista-assistidos" class="film-list">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="cadastrar">
+            <h3 class="collapsible-header">
+                <i class="fas fa-plus-circle icon-section"></i> Cadastrar Novo Filme
+                <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </h3>
+            <div class="collapsible-content">
+                <form id="form-cadastrar-filme" class="film-form">
+                    <div class="form-group">
+                        <label for="titulo"><i class="fas fa-heading"></i> Título:</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Digite o título do filme" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero"><i class="fas fa-theater-masks"></i> Gênero:</label>
+                        <input type="text" id="genero" name="genero" placeholder="Digite o gênero do filme" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="anoLancamento"><i class="fas fa-calendar-alt"></i> Ano de Lançamento:</label>
+                        <input type="number" id="anoLancamento" name="anoLancamento" placeholder="Digite o ano de lançamento" required>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-save"></i> Cadastrar Filme
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="section" id="todos-filmes">
+            <h3 class="collapsible-header">
+                <i class="fas fa-list icon-section"></i> Todos os Filmes Cadastrados
+                <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+            </h3>
+            <div class="collapsible-content">
+                <form id="form-pesquisa" class="search-form">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" name="search" placeholder="Pesquisar filmes...">
+                        <button type="submit" class="search-btn">Buscar</button>
+                    </div>
+                </form>
+                <div id="lista-todos-filmes" class="film-list">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Carregando...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Client Filmes. CoraiolaLM.</p>
+    </footer>
+
+    <script src="js/homeCliente.js"></script>
+</body>
+</html>

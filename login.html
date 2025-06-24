@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Suas Credenciais, Por favor...</h1>
+        <h2>Login</h2>
+        <p id="msg" class="message"></p>
+        <form id="loginForm">
+            <table>
+                <tr>
+                    <td><label for="username">Email:</label></td>
+                    <td>
+                        <input type="email" id="username" name="username" required autocomplete="username" placeholder="seu@email.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="password">Senha:</label></td>
+                    <td>
+                        <input type="password" id="password" name="password" required autocomplete="current-password" placeholder="••••••••">
+                    </td>
+                </tr>
+            </table>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+    </div>
+    <script src="js/login.js" defer></script>
+</body>
+</html>
